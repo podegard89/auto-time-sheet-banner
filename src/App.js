@@ -1,12 +1,13 @@
 import './App.css';
-import StopWatch from './Components/StopWatch/StopWatch.jsx';
+import Buttons from './Components/Buttons'
 
 function App() {
   return (
     <div className="App">
-      <StopWatch />
+      <Buttons />
     </div>
-  );
+  )
+
 }
 
 export default App;

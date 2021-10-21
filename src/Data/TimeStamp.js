@@ -1,20 +1,19 @@
 class TimeStamp {
+
     constructor() {
+        this.startTime = null;
+        this.endTime = null;
+        this.hours = null;
+    }
+    setStartTime() {
         this.startTime = new Date();
         this.currDate = this.startTime.toLocaleDateString();
-        this.hours = null;
         this.startTimeString = `${TimeStamp.hourCheck(this.startTime.getHours())}:${this.startTime.getMinutes()}:${this.startTime.getSeconds()}`
-        this.endTime = null;
-        this.endTimeString = null;
     }
 
-    setEndTime() {
+    setEndTimeAndHours() {
         this.endTime = new Date();
-        
         this.endTimeString = `${TimeStamp.hourCheck(this.endTime.getHours())}:${this.endTime.getMinutes()}:${this.endTime.getSeconds()}`
-    }
-
-    setHours() {
         const timeElapsedMilliseconds = this.endTime - this.startTime;
         this.hours = TimeStamp.msToTime(timeElapsedMilliseconds);
     }
@@ -32,13 +31,15 @@ class TimeStamp {
     }
 
     static hourCheck(hour) {
-        if(hour > 12) {
+        if (hour > 12) {
             return hour - 12;
         }
     }
 }
 
-module.exports = { TimeStamp }
+module.exports = {
+    TimeStamp
+}
 // const timeStamp = new TimeStamp();
 // timeStamp.setEndTime();
 // timeStamp.setHours();
