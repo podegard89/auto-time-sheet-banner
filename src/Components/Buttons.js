@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react/cjs/react.development";
+import { MDBBtn } from "mdb-react-ui-kit";
+import './Buttons.css';
 const { TimeStamp } = require('../Data/TimeStamp')
 const { Sheet } = require('../Data/Sheet')
 
@@ -29,12 +31,12 @@ function Buttons() {
     }
 
     return (
-        <div>
+        <div className="buttons">
             {/* {shouldShowClockIn ?
                 <button onClick={handleStartClick}>Clock In</button> :
                 <button onClick={handleEndClick}>Clock out</button>} */}
-                <button onClick={handleStartClick}>Clock In</button>
-                <button onClick={handleEndClick}>Clock out</button>
+                <MDBBtn floating className="button" color='danger' onClick={handleStartClick}>Clock In</MDBBtn>
+                <MDBBtn floating className="button" color='success' onClick={handleEndClick}>Clock out</MDBBtn>
         </div>
     );
 }

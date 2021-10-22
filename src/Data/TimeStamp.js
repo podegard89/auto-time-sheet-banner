@@ -35,9 +35,7 @@ class TimeStamp {
     }
 }
 
-module.exports = {
-    TimeStamp
-}
+module.exports = { TimeStamp }
 // const timeStamp = new TimeStamp();
 // timeStamp.setEndTime();
 // timeStamp.setHours();
