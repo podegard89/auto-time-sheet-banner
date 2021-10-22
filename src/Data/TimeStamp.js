@@ -31,9 +31,7 @@ class TimeStamp {
     }
 
     static hourCheck(hour) {
-        if (hour > 12) {
-            return hour - 12;
-        }
+        return hour > 12 ? hour - 12 : hour;
     }
 }
 
