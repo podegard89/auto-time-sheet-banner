@@ -1,0 +1,13 @@
+.button {
+    width: 480px;
+    height: 480px;
+    /* margin: 50px; */
+    margin-inline: 60px;
+    font-size: 70px;
+    font-weight: bold;
+    border-color: gold;
+    border-width: 50px;
+    border-style: ridge;
+    -webkit-text-stroke: 2px black;
+}
+

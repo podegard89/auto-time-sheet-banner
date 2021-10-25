@@ -1,10 +1,12 @@
 import './App.css';
-import Buttons from './Components/Buttons'
+import DayOffButton from './Components/DayOffButton/DayOffButton';
+import Buttons from './Components/ClockingButtons/Buttons'
 
 function App() {
   return (
     <div className="App">
       <Buttons />
+      <DayOffButton />
     </div>
   )
 

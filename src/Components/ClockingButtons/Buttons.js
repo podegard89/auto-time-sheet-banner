@@ -1,9 +1,8 @@
 import React from "react";
-import { useState } from "react/cjs/react.development";
 import { MDBBtn } from "mdb-react-ui-kit";
 import './Buttons.css';
-const { TimeStamp } = require('../Data/TimeStamp')
-const { Sheet } = require('../Data/Sheet')
+const { TimeStamp } = require('../../Data/TimeStamp')
+const { Sheet } = require('../../Data/Sheet') 
 
 function Buttons() {
 
@@ -19,12 +18,16 @@ function Buttons() {
     }
 
     const handleStartClick = () => {
+
         timeStamp.setStartTime();
+        timeStamp.bannerDateFormat();
+        console.log(timeStamp.currDate);
         // setShouldShowClockIn(false);
     }
 
     const handleEndClick = async () => {
         timeStamp.setEndTimeAndHours();
+        console.log(timeStamp.currDate)
         await appendSpreadsheet(timeStamp);
         timeStamp = new TimeStamp();
         // setShouldShowClockIn(true);
@@ -35,8 +38,10 @@ function Buttons() {
             {/* {shouldShowClockIn ?
                 <button onClick={handleStartClick}>Clock In</button> :
                 <button onClick={handleEndClick}>Clock out</button>} */}
+            <div className="clockInClockOut">
                 <MDBBtn floating className="button" color='danger' onClick={handleStartClick}>Clock In</MDBBtn>
                 <MDBBtn floating className="button" color='success' onClick={handleEndClick}>Clock out</MDBBtn>
+            </div>
         </div>
     );
 }

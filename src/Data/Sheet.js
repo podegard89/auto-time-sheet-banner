@@ -17,6 +17,12 @@ class Sheet {
         const sheet = this.doc.sheetsByIndex[0]; // use first sheet
         await sheet.addRows([rows]);
     }
+
+    async getRows() {
+        const sheet = this.doc.sheetsByIndex[0];
+        const rows = await sheet.getRows();
+        return rows;
+    }
 }
 
 module.exports = { Sheet }

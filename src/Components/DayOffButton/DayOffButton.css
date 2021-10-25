@@ -1,0 +1,17 @@
+.submitButton {
+    width: 280px;
+    height: 280px; 
+    font-size: 40px;
+    font-weight: bold;
+    border-color: gold;
+    border-width: 50px;
+    border-style: ridge;
+    -webkit-text-stroke: 2px black;
+}
+
+.submitTimerDiv {
+    text-align: center;
+    /* position: absolute; */
+    margin: auto;
+    /* width: 50%; */
+}
