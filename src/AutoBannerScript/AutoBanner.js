@@ -1,13 +1,11 @@
 const puppeteer = require('puppeteer');
 const { Sheet } = require('../Data/Sheet');
-const bannerURL = require('../sheeturl.json').bannerURL;
 const secrets = require('../secrets');
 
 (async () => {
     const browser = await puppeteer.launch({ headless: false });
     const page = await browser.newPage();
-    await page.goto(bannerURL);
-
+    await page.goto(secrets.bannerURL);
     //login
     const loginFormElements = await page.$$('input');
     await loginFormElements[0].type(secrets.USERNAME);
